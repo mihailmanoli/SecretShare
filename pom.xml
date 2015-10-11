@@ -1,0 +1,86 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ro.manoli</groupId>
+	<artifactId>parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Parent project</name>
+	<description>This is parent project</description>
+	
+	<parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.2.6.RELEASE</version>
+    </parent>
+	
+	<modules>
+		<module>kp-abe</module>
+		<module>secretshare.api</module>
+	</modules>
+	
+	<properties>
+	 	<java.version>1.8</java.version>
+		<jpbc.version>1.1.0</jpbc.version>
+		<jsexp.version>0.2.2</jsexp.version>
+	</properties>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>it.unisa.dia.gas.jpbc</groupId>
+				<artifactId>jpbc-api</artifactId>
+				<version>${jpbc.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>it.unisa.dia.gas.plaf</groupId>
+				<artifactId>jpbc-plaf</artifactId>
+				<version>${jpbc.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tu-dresden.inf.lat.jsexp</groupId>
+				<artifactId>jsexp</artifactId>
+				<version>${jsexp.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.12</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-releases</id>
+            <url>https://repo.spring.io/libs-release</url>
+        </pluginRepository>
+    </pluginRepositories>
+    
+	<repositories>
+		<repository>
+            <id>spring-releases</id>
+            <url>https://repo.spring.io/libs-release</url>
+        </repository>
+		<repository>
+			<id>localRepository</id>
+			<name>local-Repository</name>
+			<url>file:///${basedir}/libraries</url>
+		</repository>
+	</repositories>
+</project>

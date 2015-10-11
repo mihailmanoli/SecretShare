@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>ro.manoli</groupId>
+		<artifactId>parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>kp-abe</artifactId>
+	<name>Kp-Abe module</name>
+	<dependencies>
+		<dependency>
+			<groupId>it.unisa.dia.gas.jpbc</groupId>
+			<artifactId>jpbc-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>it.unisa.dia.gas.plaf</groupId>
+			<artifactId>jpbc-plaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.tu-dresden.inf.lat.jsexp</groupId>
+			<artifactId>jsexp</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+	</dependencies>
+</project>
