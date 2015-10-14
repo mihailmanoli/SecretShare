@@ -37,9 +37,11 @@ public class ABE {
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
 
-		sb.append("publicParams: \n------------\n" + publicParams + "\n");
-		sb.append("------------\n");
-		sb.append("Secret y = " + y);
+		sb.append("publicParams: \n------------\n"); 
+		sb.append(publicParams); 
+		sb.append("\n------------\n");
+		sb.append("Secret y = ");
+		sb.append(y);
 
 		return sb.toString();
 	}
@@ -235,7 +237,7 @@ public class ABE {
 		return cipherText;
 	}
 
-	byte[] decryptAES(byte[] ciphertext, byte[] key) {
+	protected byte[] decryptAES(byte[] ciphertext, byte[] key) {
 		// System.out.println("dec Key = " + new String(key));
 		byte[] plaintext = null;
 		try {

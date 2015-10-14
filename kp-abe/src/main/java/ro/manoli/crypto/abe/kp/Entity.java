@@ -669,8 +669,8 @@ public class Entity {
 			// byte[] b = manager.sign(c);
 			// System.out.println("Valid = " + abe.validateSignature(new
 			// String[]{"#level1N=12"}, c, b));
-			String signature = manager.sign("Saman");
-			System.out.println("Valid = " + abe.validateSignature(new String[] { "#level1N=14" }, "Saman", signature));
+			String signature = manager.sign("Mihail");
+			System.out.println("Valid = " + abe.validateSignature(new String[] { "#level1N=14" }, "Mihail", signature));
 
 			// System.out.println("manager: " + manager);
 			// manager.write(out);
