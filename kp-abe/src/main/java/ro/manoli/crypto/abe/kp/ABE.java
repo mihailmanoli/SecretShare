@@ -59,7 +59,12 @@ public class ABE {
 	}
 
 	/**
-	 * Constructor of ABE.
+	 * Constructor of ABE. Practically there is a part of the Setup algorithm
+	 * of the KP-ABE in Large Universe construction. Here are set up public parameters:
+	 * g - generator of bilinear group G1,
+	 * y - the secret key,
+	 * g1 - g^y,
+	 * g2 - a random element of G2.
 	 * @param rBits - the number of primes
 	 * @param qBits - the bit length of each prime
 	 */

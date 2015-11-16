@@ -35,7 +35,6 @@ public class Utility {
 		} catch (NumberFormatException nfe) {
 			int b_i = Integer.parseInt(b);
 			result = lt(b_i, a, intSize - 1);
-
 		}
 		return result;
 	}
@@ -53,7 +52,6 @@ public class Utility {
 		} catch (NumberFormatException nfe) {
 			int b_i = Integer.parseInt(b);
 			result = gt(b_i, a, intSize - 1);
-
 		}
 		return result;
 	}

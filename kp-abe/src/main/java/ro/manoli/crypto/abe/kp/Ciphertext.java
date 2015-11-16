@@ -32,6 +32,9 @@ public class Ciphertext {
 
 	// rec len, enc len , REC:(atts len, (att len, att), g2s , Eis len, Eis),
 	// enc bytes
+	/**
+	 * Asociem criptotextul cu atributele
+	 */
 	public Ciphertext(ABE abe, InputStream is) {
 		int len = ABE.readInteger(is);
 		int encLen = ABE.readInteger(is);
